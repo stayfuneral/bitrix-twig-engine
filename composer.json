@@ -1,5 +1,6 @@
 {
   "name": "stayfuneral/bitrix-twig-engine",
+  "version": "1.0.1",
   "description": "Twig Engine for Bitrix framework",
   "type": "package",
   "minimum-stability": "stable",
