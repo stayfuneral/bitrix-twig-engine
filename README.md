@@ -44,6 +44,27 @@ StayFuneral\BitrixTwig\TemplateEngine::register();
 
 $MESS['SOME_TEXT'] = 'Какой-то текст...';
 ```
+
+### Доступные расширения
+
+Пока доступны 2 расширения:
+
+* `getMessage(message, replaceArray)` - реализация метода 
+```php
+Bitrix\Main\Localization\Loc::getMessage($message, $replaceArray)
+```
+где массив `$replaceArray` - необязательный параметр.
+* `showComponent(name)` - вызов компонента. Помимо названия, можно передавать следующие необязательные параметры:
+```php
+/**
+* @param string $template шаблон компонента
+ * @param array $params параметры компонента
+ * @param CBitrixComponent $parentComponent
+ * @param array $functionParams
+ * @param $returnResult
+ */
+
+```
 ### Добавление своих расширений
 
 Добавить своё расширение можно через прослушивание события `twig.before_render` (используется компонент EventDispatcher от Symfony).
@@ -91,3 +112,4 @@ TwigSubscribersTable::addSubscriber(TwigRenderSubscriber::class);
 ```
 
 Теперь каждый раз при отрисовке шаблона диспетчер событий будет добавлять ваше расширение в твиг.
+
