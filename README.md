@@ -24,7 +24,7 @@ if(!$db->isTableExists($entity->getDBTableName())) {
 ```php
 require_once '/path/to/vendor/autoload.php';
 
-StayFuneral\BitrixTwig\TemplateEngine::register();
+StayFuneral\BitrixTwig\Template\Engine::register();
 ```
 
 ## Использование

@@ -1,6 +1,6 @@
 <?php
 
-use StayFuneral\BitrixTwig\TemplateEngine;
+use StayFuneral\BitrixTwig\Template\Engine;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 if(!function_exists('renderTwigTemplate')) {
@@ -9,7 +9,7 @@ if(!function_exists('renderTwigTemplate')) {
     {
         $dispatcher = new EventDispatcher();
 
-        $engine = new TemplateEngine($dispatcher);
+        $engine = new Engine($dispatcher);
         $engine->addComponentEpilog($templateFolder, $template);
 
         echo $engine->render($templateFile, $arResult, $arParams, $arLangMessages, $templateFolder, $parentTemplateFolder, $template);

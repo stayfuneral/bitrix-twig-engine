@@ -1,6 +1,6 @@
 <?php
 
-namespace StayFuneral\BitrixTwig;
+namespace StayFuneral\BitrixTwig\Template;
 
 use Bitrix\Main\Application;
 use Bitrix\Main\Context;
@@ -20,7 +20,7 @@ use CBitrixComponentTemplate;
 /**
  * @property Environment $twig
  */
-class TemplateEngine
+class Engine
 {
     public const TWIG_CACHE_FOLDER = '/bitrix/cache/twig';
     public const TWIG_DEBUG = true;
