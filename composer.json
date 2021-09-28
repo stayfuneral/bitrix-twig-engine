@@ -1,5 +1,5 @@
 {
-  "name": "stayfuneral/bitrix-twig",
+  "name": "stayfuneral/bitrix-twig-engine",
   "description": "Twig Engine for Bitrix framework",
   "type": "package",
   "minimum-stability": "dev",
